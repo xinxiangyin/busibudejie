@@ -12,6 +12,8 @@
 
 @property (nonatomic ,weak) UIButton *plusBtn;
 
+@property (nonatomic, weak) UIControl *preClickedTabBarBtn;
+
 @end
 
 @implementation ScjTabBar
@@ -39,18 +41,37 @@
     CGFloat x = 0;
     int i = 0;
     
-    for (UIView *barBtn in self.subviews) {
+    for (UIControl *barBtn in self.subviews) {
         if ([barBtn isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            
+            if (i == 0 && self.preClickedTabBarBtn == nil) {
+                self.preClickedTabBarBtn = barBtn;
+            }
+            
             if (i == 2) {
                 i++;
             }
             x = i * barBtnW;
             barBtn.frame = CGRectMake(x, 0, barBtnW, barBtnH);
             i++;
+            
+            [barBtn addTarget:self action:@selector(tabBarBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         }
         
         self.plusBtn.center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
     }
+    
+}
+
+- (void)tabBarBtnClick:(UIControl *)tabBarBtn{
+    
+    if (self.preClickedTabBarBtn == tabBarBtn) {
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:ScjTabBarButtonDidRepeatClickNotification object:nil];
+        
+    }
+    
+    self.preClickedTabBarBtn = tabBarBtn;
     
 }
 

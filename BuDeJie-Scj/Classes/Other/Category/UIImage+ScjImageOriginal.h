@@ -12,4 +12,8 @@
 
 + (UIImage *)imageOriginalNamed:(NSString *)name;
 
++ (UIImage *)scj_circleImageWithNamed:(NSString *)name;
+
+- (UIImage *)scj_circleImage;
+
 @end

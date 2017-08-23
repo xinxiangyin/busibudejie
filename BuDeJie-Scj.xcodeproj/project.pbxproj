@@ -20,6 +20,16 @@
 		3C1DC8B81F186E4000D5D4A6 /* ScjMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1DC8B71F186E4000D5D4A6 /* ScjMeTableViewController.m */; };
 		3C1DC8BF1F19AE1200D5D4A6 /* ScjTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1DC8BE1F19AE1200D5D4A6 /* ScjTabBarViewController.m */; };
 		3C1DC8C61F19BE0B00D5D4A6 /* UIImage+ScjImageOriginal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1DC8C51F19BE0B00D5D4A6 /* UIImage+ScjImageOriginal.m */; };
+		3C3095761F34AECA00703E64 /* ScjTitleBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3095751F34AECA00703E64 /* ScjTitleBtn.m */; };
+		3C3095791F35712800703E64 /* ScjConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3095781F35712800703E64 /* ScjConst.m */; };
+		3C30958B1F358F6700703E64 /* ScjAllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30958A1F358F6700703E64 /* ScjAllTableViewController.m */; };
+		3C30958E1F358F8E00703E64 /* ScjVideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30958D1F358F8E00703E64 /* ScjVideoTableViewController.m */; };
+		3C3095911F358FA800703E64 /* ScjVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3095901F358FA800703E64 /* ScjVoiceTableViewController.m */; };
+		3C3095941F358FBC00703E64 /* ScjPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3095931F358FBC00703E64 /* ScjPictureTableViewController.m */; };
+		3C3095971F358FD300703E64 /* ScjWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3095961F358FD300703E64 /* ScjWordTableViewController.m */; };
+		3C30959B1F3AE1AD00703E64 /* ScjTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30959A1F3AE1AD00703E64 /* ScjTopic.m */; };
+		3C998FF81F47E8490087B692 /* ScjTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C998FF61F47E8490087B692 /* ScjTopicCell.m */; };
+		3C998FF91F47E8490087B692 /* ScjTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C998FF71F47E8490087B692 /* ScjTopicCell.xib */; };
 		3CBE08A91F2467FD002DA4A4 /* ScjSubTagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE08A71F2467FD002DA4A4 /* ScjSubTagTableViewCell.m */; };
 		3CBE08AA1F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE08A81F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib */; };
 		3CBE08AC1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE08AB1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib */; };
@@ -95,6 +105,26 @@
 		3C1DC8BE1F19AE1200D5D4A6 /* ScjTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTabBarViewController.m; sourceTree = "<group>"; };
 		3C1DC8C41F19BE0B00D5D4A6 /* UIImage+ScjImageOriginal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ScjImageOriginal.h"; sourceTree = "<group>"; };
 		3C1DC8C51F19BE0B00D5D4A6 /* UIImage+ScjImageOriginal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ScjImageOriginal.m"; sourceTree = "<group>"; };
+		3C3095741F34AECA00703E64 /* ScjTitleBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTitleBtn.h; sourceTree = "<group>"; };
+		3C3095751F34AECA00703E64 /* ScjTitleBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTitleBtn.m; sourceTree = "<group>"; };
+		3C3095771F35712800703E64 /* ScjConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjConst.h; sourceTree = "<group>"; };
+		3C3095781F35712800703E64 /* ScjConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjConst.m; sourceTree = "<group>"; };
+		3C3095891F358F6700703E64 /* ScjAllTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjAllTableViewController.h; sourceTree = "<group>"; };
+		3C30958A1F358F6700703E64 /* ScjAllTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjAllTableViewController.m; sourceTree = "<group>"; };
+		3C30958C1F358F8E00703E64 /* ScjVideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjVideoTableViewController.h; sourceTree = "<group>"; };
+		3C30958D1F358F8E00703E64 /* ScjVideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjVideoTableViewController.m; sourceTree = "<group>"; };
+		3C30958F1F358FA800703E64 /* ScjVoiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjVoiceTableViewController.h; sourceTree = "<group>"; };
+		3C3095901F358FA800703E64 /* ScjVoiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjVoiceTableViewController.m; sourceTree = "<group>"; };
+		3C3095921F358FBC00703E64 /* ScjPictureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjPictureTableViewController.h; sourceTree = "<group>"; };
+		3C3095931F358FBC00703E64 /* ScjPictureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjPictureTableViewController.m; sourceTree = "<group>"; };
+		3C3095951F358FD300703E64 /* ScjWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjWordTableViewController.h; sourceTree = "<group>"; };
+		3C3095961F358FD300703E64 /* ScjWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjWordTableViewController.m; sourceTree = "<group>"; };
+		3C3095981F35912100703E64 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3C3095991F3AE1AD00703E64 /* ScjTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTopic.h; sourceTree = "<group>"; };
+		3C30959A1F3AE1AD00703E64 /* ScjTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTopic.m; sourceTree = "<group>"; };
+		3C998FF51F47E8490087B692 /* ScjTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTopicCell.h; sourceTree = "<group>"; };
+		3C998FF61F47E8490087B692 /* ScjTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTopicCell.m; sourceTree = "<group>"; };
+		3C998FF71F47E8490087B692 /* ScjTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjTopicCell.xib; sourceTree = "<group>"; };
 		3CBE08A61F2467FD002DA4A4 /* ScjSubTagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjSubTagTableViewCell.h; sourceTree = "<group>"; };
 		3CBE08A71F2467FD002DA4A4 /* ScjSubTagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjSubTagTableViewCell.m; sourceTree = "<group>"; };
 		3CBE08A81F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjSubTagTableViewCell.xib; sourceTree = "<group>"; };
@@ -257,6 +287,16 @@
 			children = (
 				3C1DC8AA1F186DB900D5D4A6 /* ScjEssenceViewController.h */,
 				3C1DC8AB1F186DB900D5D4A6 /* ScjEssenceViewController.m */,
+				3C3095891F358F6700703E64 /* ScjAllTableViewController.h */,
+				3C30958A1F358F6700703E64 /* ScjAllTableViewController.m */,
+				3C30958C1F358F8E00703E64 /* ScjVideoTableViewController.h */,
+				3C30958D1F358F8E00703E64 /* ScjVideoTableViewController.m */,
+				3C30958F1F358FA800703E64 /* ScjVoiceTableViewController.h */,
+				3C3095901F358FA800703E64 /* ScjVoiceTableViewController.m */,
+				3C3095921F358FBC00703E64 /* ScjPictureTableViewController.h */,
+				3C3095931F358FBC00703E64 /* ScjPictureTableViewController.m */,
+				3C3095951F358FD300703E64 /* ScjWordTableViewController.h */,
+				3C3095961F358FD300703E64 /* ScjWordTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +304,8 @@
 		3C1DC8921F186D7D00D5D4A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C3095991F3AE1AD00703E64 /* ScjTopic.h */,
+				3C30959A1F3AE1AD00703E64 /* ScjTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +313,11 @@
 		3C1DC8931F186D7D00D5D4A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C3095741F34AECA00703E64 /* ScjTitleBtn.h */,
+				3C3095751F34AECA00703E64 /* ScjTitleBtn.m */,
+				3C998FF51F47E8490087B692 /* ScjTopicCell.h */,
+				3C998FF61F47E8490087B692 /* ScjTopicCell.m */,
+				3C998FF71F47E8490087B692 /* ScjTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -404,10 +451,13 @@
 		3C1DC8A01F186D7D00D5D4A6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				3C3095771F35712800703E64 /* ScjConst.h */,
+				3C3095781F35712800703E64 /* ScjConst.m */,
 				3C1DC8C01F19B94C00D5D4A6 /* Category */,
 				3C1DC8A11F186D7D00D5D4A6 /* AppDelegate.h */,
 				3C1DC8A21F186D7D00D5D4A6 /* AppDelegate.m */,
 				3C1DC8A31F186D7D00D5D4A6 /* main.m */,
+				3C3095981F35912100703E64 /* PrefixHeader.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -713,6 +763,7 @@
 				3CBE08AA1F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib in Resources */,
 				3CBE08AC1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib in Resources */,
 				3CBE08D11F2B37B5002DA4A4 /* ScjSquareCollectionViewCell.xib in Resources */,
+				3C998FF91F47E8490087B692 /* ScjTopicCell.xib in Resources */,
 				3CF185871F1E47FF00E23E14 /* LaunchImage-700-568h@2x.png in Resources */,
 				3CF185891F1E47FF00E23E14 /* LaunchImage-800-667h@2x.png in Resources */,
 				3CBE08B61F24DD66002DA4A4 /* ScjLoginRegisterV.xib in Resources */,
@@ -836,12 +887,17 @@
 			files = (
 				3CE454311F2329D10004FE1F /* ScjAdItem.m in Sources */,
 				3C1DC8B21F186E0E00D5D4A6 /* ScjNewViewController.m in Sources */,
+				3C3095971F358FD300703E64 /* ScjWordTableViewController.m in Sources */,
 				3CBE08C11F27292C002DA4A4 /* UIView+ScjFrame.m in Sources */,
+				3C3095941F358FBC00703E64 /* ScjPictureTableViewController.m in Sources */,
 				3CBE08B41F24DD4F002DA4A4 /* ScjLoginRegisterV.m in Sources */,
 				3CBE08BE1F272330002DA4A4 /* ScjFastLoginBtn.m in Sources */,
 				3CBE08B01F24D3C4002DA4A4 /* ScjLoginRegisterViewController.m in Sources */,
+				3C3095911F358FA800703E64 /* ScjVoiceTableViewController.m in Sources */,
 				3C1DC8B81F186E4000D5D4A6 /* ScjMeTableViewController.m in Sources */,
+				3C30958B1F358F6700703E64 /* ScjAllTableViewController.m in Sources */,
 				3CF185671F1C684A00E23E14 /* ScjTabBar.m in Sources */,
+				3C30959B1F3AE1AD00703E64 /* ScjTopic.m in Sources */,
 				3C1DC8AC1F186DB900D5D4A6 /* ScjEssenceViewController.m in Sources */,
 				3CE454371F2372500004FE1F /* ScjTagItem.m in Sources */,
 				3CF1856A1F1CA96600E23E14 /* UIBarButtonItem+Scj__item.m in Sources */,
@@ -850,13 +906,17 @@
 				3C1DC8A81F186D7D00D5D4A6 /* AppDelegate.m in Sources */,
 				3CBE08D01F2B37B5002DA4A4 /* ScjSquareCollectionViewCell.m in Sources */,
 				3CE454341F2371250004FE1F /* ScjSubTagViewController.m in Sources */,
+				3C3095791F35712800703E64 /* ScjConst.m in Sources */,
 				3CF1857C1F1E42ED00E23E14 /* ScjADViewController.m in Sources */,
 				3CBE08A91F2467FD002DA4A4 /* ScjSubTagTableViewCell.m in Sources */,
 				3CBE08CA1F277FA3002DA4A4 /* UITextField+ScjPlaceHolderColor.m in Sources */,
 				3CBE08D41F2C26B7002DA4A4 /* ScjSquareItem.m in Sources */,
+				3C998FF81F47E8490087B692 /* ScjTopicCell.m in Sources */,
+				3C30958E1F358F8E00703E64 /* ScjVideoTableViewController.m in Sources */,
 				3C1DC8B51F186E2400D5D4A6 /* ScjPublishViewController.m in Sources */,
 				3CF1856D1F1CE16F00E23E14 /* ScjNavViewController.m in Sources */,
 				3CBE08D91F306167002DA4A4 /* ScjToolFile.m in Sources */,
+				3C3095761F34AECA00703E64 /* ScjTitleBtn.m in Sources */,
 				3CBE08B91F2716B4002DA4A4 /* ScjFastLoginV.m in Sources */,
 				3C1DC8C61F19BE0B00D5D4A6 /* UIImage+ScjImageOriginal.m in Sources */,
 				3C1DC8BF1F19AE1200D5D4A6 /* ScjTabBarViewController.m in Sources */,
@@ -997,6 +1057,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BuDeJie-Scj/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "BuDeJie-Scj/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xinxiangyin.BuDeJie-Scj";
@@ -1010,6 +1072,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BuDeJie-Scj/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "BuDeJie-Scj/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xinxiangyin.BuDeJie-Scj";

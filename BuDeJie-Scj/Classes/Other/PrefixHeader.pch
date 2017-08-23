@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  BuDeJie-Scj
+//
+//  Created by 施仓健 on 2017/8/5.
+//  Copyright © 2017年 施仓健. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+/*
+ pch步骤:1.提前编译Pch
+ 
+ 1.存放公用宏
+ 2.存放公用头文件
+ 3.自定义Log
+ */
+#import "UIView+ScjFrame.h"
+#import "ScjConst.h"
+#import "UIImage+ScjImageOriginal.h"
+
+#define ScjColor(r,g,b) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:1]
+#define ScjRandomColor ScjColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define ScjFunc ScjLog(@"%s",__func__)
+
+#define ScjScreeenW [UIScreen mainScreen].bounds.size.width
+#define ScjScreeenH [UIScreen mainScreen].bounds.size.height
+
+#ifdef DEBUG // 调试
+
+#define ScjLog(...) NSLog(__VA_ARGS__);
+
+#else // 发布
+
+#define ScjLog(...)
+
+#endif
