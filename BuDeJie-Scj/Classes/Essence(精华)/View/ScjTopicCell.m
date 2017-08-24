@@ -8,6 +8,9 @@
 
 #import "ScjTopicCell.h"
 #import "ScjTopic.h"
+#import "ScjTopicVideoView.h"
+#import "ScjTopicVoiceView.h"
+#import "ScjTopicPictureView.h"
 #import <UIImageView+WebCache.h>
 
 @interface ScjTopicCell()
@@ -24,10 +27,45 @@
 @property (weak, nonatomic) IBOutlet UIView *topCmtV;
 @property (weak, nonatomic) IBOutlet UILabel *top_cmtL;
 
+/* 中间控件 */
+@property (nonatomic, weak) ScjTopicVideoView *videoV;
+
+@property (nonatomic, weak) ScjTopicVoiceView *voiceV;
+
+@property (nonatomic, weak) ScjTopicPictureView *pictureV;
+
 @end
 
 @implementation ScjTopicCell
 
+#pragma mark - 懒加载
+- (ScjTopicVideoView *)videoV{
+    if (!_videoV) {
+        ScjTopicVideoView *videoV = [ScjTopicVideoView scj_viewFromNib];
+        [self.contentView addSubview:videoV];
+        _videoV = videoV;
+    }
+    return _videoV;
+}
+
+- (ScjTopicVoiceView *)voiceV{
+    if (!_voiceV) {
+        ScjTopicVoiceView *voiceV = [ScjTopicVoiceView scj_viewFromNib];
+        [self.contentView addSubview:voiceV];
+        _voiceV = voiceV;
+    }
+    return _voiceV;
+}
+- (ScjTopicPictureView *)pictureV{
+    if (!_pictureV) {
+        ScjTopicPictureView *pictureV = [ScjTopicPictureView scj_viewFromNib];
+        [self.contentView addSubview:pictureV];
+        _pictureV = pictureV;
+    }
+    return _pictureV;
+}
+
+#pragma mark - 初始化
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
@@ -77,6 +115,36 @@
     [self setBtnTitel:self.caiButton withNumber:topic.ding placeholder:@"踩"];
     [self setBtnTitel:self.repostButton withNumber:topic.ding placeholder:@"分享"];
     [self setBtnTitel:self.commentButton withNumber:topic.ding placeholder:@"评论"];
+    
+    if (topic.type == ScjTopicTypeVideo) {
+        self.videoV.hidden = NO;
+        self.voiceV.hidden = YES;
+        self.pictureV.hidden = YES;
+    } else if(topic.type == ScjTopicTypeVoice){
+        self.videoV.hidden = YES;
+        self.voiceV.hidden = NO;
+        self.pictureV.hidden = YES;
+    } else if(topic.type == ScjTopicTypePicture){
+        self.videoV.hidden = YES;
+        self.voiceV.hidden = YES;
+        self.pictureV.hidden = NO;
+    } else if(topic.type == ScjTopicTypeWord){
+        self.videoV.hidden = YES;
+        self.voiceV.hidden = YES;
+        self.pictureV.hidden = YES;
+    }
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    if (self.topic.type == ScjTopicTypeVideo) {
+        self.videoV.frame = self.topic.middleFrame;
+    } else if (self.topic.type == ScjTopicTypeVoice) {
+        self.voiceV.frame = self.topic.middleFrame;
+    } else if (self.topic.type == ScjTopicTypePicture) {
+        self.pictureV.frame = self.topic.middleFrame;
+    }
 }
 
 - (void)setBtnTitel:(UIButton *)Btn withNumber:(NSInteger)number placeholder:(NSString *)placeholder{

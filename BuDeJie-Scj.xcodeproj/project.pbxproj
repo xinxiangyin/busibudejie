@@ -30,6 +30,12 @@
 		3C30959B1F3AE1AD00703E64 /* ScjTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30959A1F3AE1AD00703E64 /* ScjTopic.m */; };
 		3C998FF81F47E8490087B692 /* ScjTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C998FF61F47E8490087B692 /* ScjTopicCell.m */; };
 		3C998FF91F47E8490087B692 /* ScjTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C998FF71F47E8490087B692 /* ScjTopicCell.xib */; };
+		3CBDB9261F4D739600956341 /* ScjTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBDB9251F4D739600956341 /* ScjTopicVideoView.m */; };
+		3CBDB9281F4D73B200956341 /* ScjTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBDB9271F4D73B200956341 /* ScjTopicVideoView.xib */; };
+		3CBDB92B1F4D741F00956341 /* ScjTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBDB92A1F4D741F00956341 /* ScjTopicVoiceView.m */; };
+		3CBDB92D1F4D742D00956341 /* ScjTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBDB92C1F4D742D00956341 /* ScjTopicVoiceView.xib */; };
+		3CBDB9301F4D748400956341 /* ScjTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBDB92F1F4D748400956341 /* ScjTopicPictureView.m */; };
+		3CBDB9321F4D74AB00956341 /* ScjTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBDB9311F4D74AB00956341 /* ScjTopicPictureView.xib */; };
 		3CBE08A91F2467FD002DA4A4 /* ScjSubTagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE08A71F2467FD002DA4A4 /* ScjSubTagTableViewCell.m */; };
 		3CBE08AA1F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE08A81F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib */; };
 		3CBE08AC1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE08AB1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib */; };
@@ -125,6 +131,15 @@
 		3C998FF51F47E8490087B692 /* ScjTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTopicCell.h; sourceTree = "<group>"; };
 		3C998FF61F47E8490087B692 /* ScjTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTopicCell.m; sourceTree = "<group>"; };
 		3C998FF71F47E8490087B692 /* ScjTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjTopicCell.xib; sourceTree = "<group>"; };
+		3CBDB9241F4D739600956341 /* ScjTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTopicVideoView.h; sourceTree = "<group>"; };
+		3CBDB9251F4D739600956341 /* ScjTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTopicVideoView.m; sourceTree = "<group>"; };
+		3CBDB9271F4D73B200956341 /* ScjTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjTopicVideoView.xib; sourceTree = "<group>"; };
+		3CBDB9291F4D741F00956341 /* ScjTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTopicVoiceView.h; sourceTree = "<group>"; };
+		3CBDB92A1F4D741F00956341 /* ScjTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTopicVoiceView.m; sourceTree = "<group>"; };
+		3CBDB92C1F4D742D00956341 /* ScjTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjTopicVoiceView.xib; sourceTree = "<group>"; };
+		3CBDB92E1F4D748400956341 /* ScjTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTopicPictureView.h; sourceTree = "<group>"; };
+		3CBDB92F1F4D748400956341 /* ScjTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTopicPictureView.m; sourceTree = "<group>"; };
+		3CBDB9311F4D74AB00956341 /* ScjTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjTopicPictureView.xib; sourceTree = "<group>"; };
 		3CBE08A61F2467FD002DA4A4 /* ScjSubTagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjSubTagTableViewCell.h; sourceTree = "<group>"; };
 		3CBE08A71F2467FD002DA4A4 /* ScjSubTagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjSubTagTableViewCell.m; sourceTree = "<group>"; };
 		3CBE08A81F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjSubTagTableViewCell.xib; sourceTree = "<group>"; };
@@ -318,6 +333,15 @@
 				3C998FF51F47E8490087B692 /* ScjTopicCell.h */,
 				3C998FF61F47E8490087B692 /* ScjTopicCell.m */,
 				3C998FF71F47E8490087B692 /* ScjTopicCell.xib */,
+				3CBDB9241F4D739600956341 /* ScjTopicVideoView.h */,
+				3CBDB9251F4D739600956341 /* ScjTopicVideoView.m */,
+				3CBDB9271F4D73B200956341 /* ScjTopicVideoView.xib */,
+				3CBDB9291F4D741F00956341 /* ScjTopicVoiceView.h */,
+				3CBDB92A1F4D741F00956341 /* ScjTopicVoiceView.m */,
+				3CBDB92C1F4D742D00956341 /* ScjTopicVoiceView.xib */,
+				3CBDB92E1F4D748400956341 /* ScjTopicPictureView.h */,
+				3CBDB92F1F4D748400956341 /* ScjTopicPictureView.m */,
+				3CBDB9311F4D74AB00956341 /* ScjTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -763,13 +787,16 @@
 				3CBE08AA1F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib in Resources */,
 				3CBE08AC1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib in Resources */,
 				3CBE08D11F2B37B5002DA4A4 /* ScjSquareCollectionViewCell.xib in Resources */,
+				3CBDB9281F4D73B200956341 /* ScjTopicVideoView.xib in Resources */,
 				3C998FF91F47E8490087B692 /* ScjTopicCell.xib in Resources */,
 				3CF185871F1E47FF00E23E14 /* LaunchImage-700-568h@2x.png in Resources */,
 				3CF185891F1E47FF00E23E14 /* LaunchImage-800-667h@2x.png in Resources */,
 				3CBE08B61F24DD66002DA4A4 /* ScjLoginRegisterV.xib in Resources */,
+				3CBDB92D1F4D742D00956341 /* ScjTopicVoiceView.xib in Resources */,
 				3CF185861F1E47FF00E23E14 /* LaunchImage-568h@2x.png in Resources */,
 				3CF1858B1F1E47FF00E23E14 /* LaunchImage.png in Resources */,
 				3C1DC8761F1866F600D5D4A6 /* Assets.xcassets in Resources */,
+				3CBDB9321F4D74AB00956341 /* ScjTopicPictureView.xib in Resources */,
 				3CF185881F1E47FF00E23E14 /* LaunchImage-700@2x.png in Resources */,
 				3CBE08B11F24D3C4002DA4A4 /* ScjLoginRegisterViewController.xib in Resources */,
 				3C1DC8741F1866F600D5D4A6 /* Main.storyboard in Resources */,
@@ -907,6 +934,7 @@
 				3CBE08D01F2B37B5002DA4A4 /* ScjSquareCollectionViewCell.m in Sources */,
 				3CE454341F2371250004FE1F /* ScjSubTagViewController.m in Sources */,
 				3C3095791F35712800703E64 /* ScjConst.m in Sources */,
+				3CBDB9301F4D748400956341 /* ScjTopicPictureView.m in Sources */,
 				3CF1857C1F1E42ED00E23E14 /* ScjADViewController.m in Sources */,
 				3CBE08A91F2467FD002DA4A4 /* ScjSubTagTableViewCell.m in Sources */,
 				3CBE08CA1F277FA3002DA4A4 /* UITextField+ScjPlaceHolderColor.m in Sources */,
@@ -914,12 +942,14 @@
 				3C998FF81F47E8490087B692 /* ScjTopicCell.m in Sources */,
 				3C30958E1F358F8E00703E64 /* ScjVideoTableViewController.m in Sources */,
 				3C1DC8B51F186E2400D5D4A6 /* ScjPublishViewController.m in Sources */,
+				3CBDB9261F4D739600956341 /* ScjTopicVideoView.m in Sources */,
 				3CF1856D1F1CE16F00E23E14 /* ScjNavViewController.m in Sources */,
 				3CBE08D91F306167002DA4A4 /* ScjToolFile.m in Sources */,
 				3C3095761F34AECA00703E64 /* ScjTitleBtn.m in Sources */,
 				3CBE08B91F2716B4002DA4A4 /* ScjFastLoginV.m in Sources */,
 				3C1DC8C61F19BE0B00D5D4A6 /* UIImage+ScjImageOriginal.m in Sources */,
 				3C1DC8BF1F19AE1200D5D4A6 /* ScjTabBarViewController.m in Sources */,
+				3CBDB92B1F4D741F00956341 /* ScjTopicVoiceView.m in Sources */,
 				3CF185741F1CEDFC00E23E14 /* ScjSettingTableViewController.m in Sources */,
 				3CBE08C41F2776FA002DA4A4 /* ScjLoginRegisterTF.m in Sources */,
 			);

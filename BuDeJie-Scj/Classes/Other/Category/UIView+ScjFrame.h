@@ -10,6 +10,8 @@
 
 @interface UIView (ScjFrame)
 
++ (instancetype)scj_viewFromNib;
+
 @property CGFloat scj_width;
 @property CGFloat scj_height;
 @property CGFloat scj_x;

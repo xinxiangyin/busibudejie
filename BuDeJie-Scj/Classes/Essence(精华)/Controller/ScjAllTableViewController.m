@@ -55,7 +55,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = ScjRandomColor;
+    self.view.backgroundColor = ScjColor(206, 206, 206);
     
     self.tableView.contentInset = UIEdgeInsetsMake(ScjNavMaxY + ScjTitlesViewH, 0, ScjTabBarH, 0);
     
@@ -159,13 +159,13 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"31"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
     
     [self.manager GET:ScjCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
-        [responseObject writeToFile:@"/Users/shicangjian/Desktop/OC项目/topics1.plist" atomically:YES];
+//        [responseObject writeToFile:@"/Users/shicangjian/Desktop/OC项目/topics1.plist" atomically:YES];
         self.topics = [ScjTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [self.tableView reloadData];
@@ -208,7 +208,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"31"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
     parameters[@"maxtime"] = self.maxtime;
     
     [self.manager GET:ScjCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

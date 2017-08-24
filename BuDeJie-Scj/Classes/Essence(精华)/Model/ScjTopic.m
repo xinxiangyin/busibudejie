@@ -16,10 +16,23 @@
     //    [UIFont systemFontOfSize:15].lineHeight;
     
     if (_cellHeight) return _cellHeight;
+    
     _cellHeight += 55;
+    
     CGSize textMaxSize = CGSizeMake(ScjScreeenW - 2 * ScjMargin, MAXFLOAT);
     
     _cellHeight += [self.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17]} context:nil].size.height + ScjMargin;
+    
+    if (self.type != ScjTopicTypeWord) {
+        CGFloat middleW = textMaxSize.width;
+        CGFloat middleH = middleW * self.height / self.width;
+        CGFloat middleY = _cellHeight;
+        CGFloat middleX = ScjMargin;
+        self.middleFrame = CGRectMake(middleX, middleY, middleW, middleH);
+        
+        _cellHeight += middleH + ScjMargin;
+    }
+    
     if (self.top_cmt.count) {
         _cellHeight += 18;
         

@@ -10,6 +10,10 @@
 
 @implementation UIView (ScjFrame)
 
++ (instancetype)scj_viewFromNib{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+}
+
 - (void)setScj_height:(CGFloat)scj_height
 {
     CGRect rect = self.frame;
