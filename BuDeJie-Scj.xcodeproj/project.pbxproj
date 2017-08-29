@@ -36,6 +36,7 @@
 		3CBDB92D1F4D742D00956341 /* ScjTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBDB92C1F4D742D00956341 /* ScjTopicVoiceView.xib */; };
 		3CBDB9301F4D748400956341 /* ScjTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBDB92F1F4D748400956341 /* ScjTopicPictureView.m */; };
 		3CBDB9321F4D74AB00956341 /* ScjTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBDB9311F4D74AB00956341 /* ScjTopicPictureView.xib */; };
+		3CBDB9381F550ACD00956341 /* UIImageView+download.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBDB9371F550ACD00956341 /* UIImageView+download.m */; };
 		3CBE08A91F2467FD002DA4A4 /* ScjSubTagTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE08A71F2467FD002DA4A4 /* ScjSubTagTableViewCell.m */; };
 		3CBE08AA1F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE08A81F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib */; };
 		3CBE08AC1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE08AB1F24C5AC002DA4A4 /* ScjFriendtrendViewController.xib */; };
@@ -140,6 +141,8 @@
 		3CBDB92E1F4D748400956341 /* ScjTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjTopicPictureView.h; sourceTree = "<group>"; };
 		3CBDB92F1F4D748400956341 /* ScjTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjTopicPictureView.m; sourceTree = "<group>"; };
 		3CBDB9311F4D74AB00956341 /* ScjTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjTopicPictureView.xib; sourceTree = "<group>"; };
+		3CBDB9361F550ACD00956341 /* UIImageView+download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+download.h"; sourceTree = "<group>"; };
+		3CBDB9371F550ACD00956341 /* UIImageView+download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+download.m"; sourceTree = "<group>"; };
 		3CBE08A61F2467FD002DA4A4 /* ScjSubTagTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScjSubTagTableViewCell.h; sourceTree = "<group>"; };
 		3CBE08A71F2467FD002DA4A4 /* ScjSubTagTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScjSubTagTableViewCell.m; sourceTree = "<group>"; };
 		3CBE08A81F2467FD002DA4A4 /* ScjSubTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScjSubTagTableViewCell.xib; sourceTree = "<group>"; };
@@ -567,6 +570,8 @@
 				3CBE08C01F27292C002DA4A4 /* UIView+ScjFrame.m */,
 				3CBE08C81F277FA3002DA4A4 /* UITextField+ScjPlaceHolderColor.h */,
 				3CBE08C91F277FA3002DA4A4 /* UITextField+ScjPlaceHolderColor.m */,
+				3CBDB9361F550ACD00956341 /* UIImageView+download.h */,
+				3CBDB9371F550ACD00956341 /* UIImageView+download.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -952,6 +957,7 @@
 				3CBDB92B1F4D741F00956341 /* ScjTopicVoiceView.m in Sources */,
 				3CF185741F1CEDFC00E23E14 /* ScjSettingTableViewController.m in Sources */,
 				3CBE08C41F2776FA002DA4A4 /* ScjLoginRegisterTF.m in Sources */,
+				3CBDB9381F550ACD00956341 /* UIImageView+download.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

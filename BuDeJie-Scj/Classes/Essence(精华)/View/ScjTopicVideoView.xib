@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KeP-es-WQL" customClass="ScjTopicVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="TET-zL-pLT" userLabel="占位图">
+                    <rect key="frame" x="0.0" y="30" width="320" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Xn4-4a-rPY"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ldi-wj-NgC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-z6-JhU">
+                    <rect key="frame" x="125" y="75" width="71" height="71"/>
+                    <state key="normal" image="video-play"/>
+                    <state key="highlighted" image="video-play"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234播放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utq-QM-sIu" userLabel="playCountL">
+                    <rect key="frame" x="247" y="0.0" width="73" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:34" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz3-OG-y5F" userLabel="videoTimeL">
+                    <rect key="frame" x="274" y="199" width="46" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ldi-wj-NgC" secondAttribute="bottom" id="6Jx-Za-DHo"/>
+                <constraint firstAttribute="trailing" secondItem="fz3-OG-y5F" secondAttribute="trailing" id="8Cd-Gg-iFt"/>
+                <constraint firstItem="TET-zL-pLT" firstAttribute="top" secondItem="KeP-es-WQL" secondAttribute="top" constant="30" id="9sQ-kN-W18"/>
+                <constraint firstItem="CmS-z6-JhU" firstAttribute="centerX" secondItem="KeP-es-WQL" secondAttribute="centerX" id="IW5-To-g3p"/>
+                <constraint firstAttribute="bottom" secondItem="fz3-OG-y5F" secondAttribute="bottom" id="PHO-HQ-r5y"/>
+                <constraint firstAttribute="trailing" secondItem="Utq-QM-sIu" secondAttribute="trailing" id="PxZ-DE-XDC"/>
+                <constraint firstAttribute="trailing" secondItem="TET-zL-pLT" secondAttribute="trailing" id="Yqb-g8-S9a"/>
+                <constraint firstItem="CmS-z6-JhU" firstAttribute="centerY" secondItem="KeP-es-WQL" secondAttribute="centerY" id="agB-1q-lhU"/>
+                <constraint firstItem="TET-zL-pLT" firstAttribute="leading" secondItem="KeP-es-WQL" secondAttribute="leading" id="dlX-BH-kxG"/>
+                <constraint firstItem="Ldi-wj-NgC" firstAttribute="top" secondItem="KeP-es-WQL" secondAttribute="top" id="dx6-4g-2ag"/>
+                <constraint firstItem="Ldi-wj-NgC" firstAttribute="leading" secondItem="KeP-es-WQL" secondAttribute="leading" id="iW8-fu-UAN"/>
+                <constraint firstAttribute="trailing" secondItem="Ldi-wj-NgC" secondAttribute="trailing" id="jUE-b0-iY1"/>
+                <constraint firstItem="Utq-QM-sIu" firstAttribute="top" secondItem="KeP-es-WQL" secondAttribute="top" id="qZ0-kY-OOZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageV" destination="Ldi-wj-NgC" id="yLf-h0-c2F"/>
+                <outlet property="placeholderImageV" destination="TET-zL-pLT" id="MLV-m3-wrY"/>
+                <outlet property="playCountL" destination="Utq-QM-sIu" id="aJE-0s-I9g"/>
+                <outlet property="videoTimeL" destination="fz3-OG-y5F" id="fsi-5L-hVL"/>
+            </connections>
+            <point key="canvasLocation" x="6" y="-156"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
+</document>

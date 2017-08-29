@@ -47,18 +47,19 @@
     }
     _numL.text = numStr;
     
-    [_iconV sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [_iconV sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
+    [_iconV scj_setHeader:item.image_list];
 }
 
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    //ios9之后
-    _iconV.layer.cornerRadius = 30;
-    _iconV.layer.masksToBounds = YES;
-    
-}
+//- (void)awakeFromNib {
+//    [super awakeFromNib];
+//    //ios9之后
+//    _iconV.layer.cornerRadius = 30;
+//    _iconV.layer.masksToBounds = YES;
+//    
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

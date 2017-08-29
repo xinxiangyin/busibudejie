@@ -74,12 +74,8 @@
 - (void)setTopic:(ScjTopic *)topic{
     _topic = topic;
     
-    UIImage *placeholder = [UIImage scj_circleImageWithNamed:@"defaultUserIcon"];
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:placeholder options:0 completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        if (!image) return;
-        self.profileImageView.image = [image scj_circleImage];
-    }];
-    
+    [self.profileImageView scj_setHeader:topic.profile_image];
+        
     self.nameLabel.text = topic.name;
     self.passtimeLabel.text = topic.passtime;
     self.text_label.text = topic.text;
@@ -117,6 +113,7 @@
     [self setBtnTitel:self.commentButton withNumber:topic.ding placeholder:@"评论"];
     
     if (topic.type == ScjTopicTypeVideo) {
+        self.videoV.topic = topic;
         self.videoV.hidden = NO;
         self.voiceV.hidden = YES;
         self.pictureV.hidden = YES;

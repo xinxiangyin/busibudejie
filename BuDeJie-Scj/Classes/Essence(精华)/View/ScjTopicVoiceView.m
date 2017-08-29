@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *voiceTimeL;
 
+@property (weak, nonatomic) IBOutlet UIImageView *placeholderImageV;
 @end
 
 @implementation ScjTopicVoiceView
@@ -31,37 +32,12 @@
 - (void)setTopic:(ScjTopic *)topic
 {
     _topic = topic;
-    
-    // 占位图片
-    UIImage *placeholder = nil;
-    // 根据网络状态来加载图片
-    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    // 获得原图（SDWebImage的图片缓存是用图片的url字符串作为key）
-    UIImage *originImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:topic.image1];
-    if (originImage) { // 原图已经被下载过
-        self.imageV.image = originImage;
-    } else { // 原图并未下载过
-        if (mgr.isReachableViaWiFi) {
-            [self.imageV sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:placeholder];
-        } else if (mgr.isReachableViaWWAN) {
-#warning downloadOriginImageWhen3GOr4G配置项的值需要从沙盒里面获取
-            // 3G\4G网络下时候要下载原图
-            BOOL downloadOriginImageWhen3GOr4G = YES;
-            if (downloadOriginImageWhen3GOr4G) {
-                [self.imageV sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:placeholder];
-            } else {
-                [self.imageV sd_setImageWithURL:[NSURL URLWithString:topic.image0] placeholderImage:placeholder];
-            }
-        } else { // 没有可用网络
-            UIImage *thumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:topic.image0];
-            if (thumbnailImage) { // 缩略图已经被下载过
-                self.imageV.image = thumbnailImage;
-            } else { // 没有下载过任何图片
-                // 占位图片;
-                self.imageV.image = placeholder;
-            }
+    self.placeholderImageV.hidden = NO;
+    [self.imageV scj_setOriginImage:topic.image1 thumbnailImage:topic.image0 placeholder:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        if (image) {
+            self.placeholderImageV.hidden = YES;
         }
-    }
+    }];
     
     // 播放数量
     if (topic.playcount >= 10000) {
