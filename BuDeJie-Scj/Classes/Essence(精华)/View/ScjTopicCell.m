@@ -121,6 +121,7 @@
         self.voiceV.hidden = YES;
         self.pictureV.hidden = YES;
     } else if(topic.type == ScjTopicTypeVoice){
+        self.voiceV.topic = topic;
         self.videoV.hidden = YES;
         self.voiceV.hidden = NO;
         self.pictureV.hidden = YES;

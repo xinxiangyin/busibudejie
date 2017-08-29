@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+//#import "ScjTopic.h"
 
+@class ScjTopic;
 @interface ScjTopicVoiceView : UIView
+
+@property (nonatomic, strong) ScjTopic *topic;
 
 @end

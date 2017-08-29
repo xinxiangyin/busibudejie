@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ScjTabBarViewController.h"
 #import "ScjADViewController.h"
+#import <AFNetworking.h>
 
 @interface AppDelegate ()
 
@@ -29,6 +30,10 @@
     self.window.rootViewController = ADvc;
     //显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 4.开始监控网络状况
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
     return YES;
 }
 
