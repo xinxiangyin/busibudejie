@@ -159,7 +159,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"41"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"10"; // 这里发送@1也是可行的
     
     [self.manager GET:ScjCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -318,6 +318,8 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     [self dealHeader];
     
     [self dealFooter];
+    
+    [[SDImageCache sharedImageCache] clearMemory];
 
 }
 

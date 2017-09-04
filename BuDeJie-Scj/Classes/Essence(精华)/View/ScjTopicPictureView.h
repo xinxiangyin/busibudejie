@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class ScjTopic;
 @interface ScjTopicPictureView : UIView
+
+@property (nonatomic, strong) ScjTopic *topic;
 
 @end

@@ -26,6 +26,10 @@
     if (self.type != ScjTopicTypeWord) {
         CGFloat middleW = textMaxSize.width;
         CGFloat middleH = middleW * self.height / self.width;
+        if (middleH > ScjScreeenH) {
+            middleH = 200;
+            self.bigImage = YES;
+        }
         CGFloat middleY = _cellHeight;
         CGFloat middleX = ScjMargin;
         self.middleFrame = CGRectMake(middleX, middleY, middleW, middleH);

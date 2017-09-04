@@ -59,11 +59,15 @@ typedef NS_ENUM(NSInteger, ScjTopicType){
 @property (nonatomic, assign) NSInteger videotime;
 /** 音频\视频的播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
+/** 是否为动图 */
+@property (nonatomic, assign) BOOL is_gif;
 
 /* 额外增加的属性（并非服务器返回的属性，仅仅是为了提高开发效率） */
 /** 根据当前模型计算出来的cell高度 */
 @property (nonatomic, assign) CGFloat cellHeight;
 /** 中间内容的frame */
 @property (nonatomic, assign) CGRect middleFrame;
+/** 是否超长图片 */
+@property (nonatomic, assign, getter=isBigImage) BOOL bigImage;
 
 @end
