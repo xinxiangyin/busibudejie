@@ -8,6 +8,7 @@
 
 #import "ScjTopicVoiceView.h"
 #import "ScjTopic.h"
+#import "ScjSeeBigPictureViewController.h"
 #import <UIImageView+WebCache.h>
 #import <AFNetworking.h>
 
@@ -27,6 +28,20 @@
     [super awakeFromNib];
     
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    self.imageV.userInteractionEnabled = YES;
+    [self.imageV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)]];
+}
+
+- (void)seeBigPicture{
+    
+    ScjSeeBigPictureViewController *vc = [[ScjSeeBigPictureViewController alloc] init];
+    
+    vc.topic = self.topic;
+    
+    //    [UIApplication sharedApplication].keyWindow.rootViewController;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+    
 }
 
 - (void)setTopic:(ScjTopic *)topic

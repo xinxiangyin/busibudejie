@@ -8,9 +8,10 @@
 
 #import "ScjTopicPictureView.h"
 #import "ScjTopic.h"
+#import "ScjSeeBigPictureViewController.h"
 #import <UIImageView+WebCache.h>
-#import <AFNetworking.h>
-#import <UIImage+GIF.h>
+
+
 
 @interface ScjTopicPictureView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
@@ -37,6 +38,20 @@
     //    btn.contentEdgeInsets = UIEdgeInsetsMake(10, 0, 0, 0);
     //    btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     //    btn.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    
+    self.imageV.userInteractionEnabled = YES;
+    [self.imageV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)]];
+}
+
+- (void)seeBigPicture{
+    
+    ScjSeeBigPictureViewController *vc = [[ScjSeeBigPictureViewController alloc] init];
+    
+    vc.topic = self.topic;
+    
+    //    [UIApplication sharedApplication].keyWindow.rootViewController;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+    
 }
 
 - (void)setTopic:(ScjTopic *)topic

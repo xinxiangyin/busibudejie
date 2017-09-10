@@ -10,6 +10,7 @@
 #import "ScjTabBarViewController.h"
 #import "ScjADViewController.h"
 #import <AFNetworking.h>
+#import <SDImageCache.h>
 
 @interface AppDelegate ()
 
@@ -33,6 +34,9 @@
     
     // 4.开始监控网络状况
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    // 5.每次启动程序，都清除过期的图片
+//    [[SDImageCache sharedImageCache] cleanDisk];
     
     return YES;
 }

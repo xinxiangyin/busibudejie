@@ -159,7 +159,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"10"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"1"; // 这里发送@1也是可行的/** 帖子的类型 1为全部 10为图片 29为段子 31为音频 41为视频 */
     
     [self.manager GET:ScjCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -208,7 +208,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"31"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
     parameters[@"maxtime"] = self.maxtime;
     
     [self.manager GET:ScjCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -320,6 +320,15 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     [self dealFooter];
     
     [[SDImageCache sharedImageCache] clearMemory];
+    
+    // 设置缓存时长为1个月
+    //    [SDImageCache sharedImageCache].maxCacheAge = 30 * 24 * 60 * 60;
+    
+    // 清除沙盒中所有使用SD缓存的过期图片（缓存时长 > 一个星期）
+    //    [[SDImageCache sharedImageCache] cleanDisk];
+    
+    // 清除沙盒中所有使用SD缓存的图片
+    //    [[SDImageCache sharedImageCache] clearDisk];
 
 }
 
