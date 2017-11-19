@@ -21,9 +21,9 @@
     // 获得原图（SDWebImage的图片缓存是用图片的url字符串作为key）
     UIImage *originImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:originImageURL];
     if (originImage) { // 原图已经被下载过
-        self.image = originImage;
-        
-        completedBlock(originImage, nil, 0, [NSURL URLWithString:originImageURL]);
+//        self.image = originImage;
+        [self sd_setImageWithURL:[NSURL URLWithString:originImageURL] placeholderImage:placeholder completed:completedBlock];
+//        completedBlock(originImage, nil, 0, [NSURL URLWithString:originImageURL]);
     } else { // 原图并未下载过
         if (mgr.isReachableViaWiFi) {
 //            [self sd_setImageWithURL:[NSURL URLWithString:originImageURL] placeholderImage:placeholder completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {

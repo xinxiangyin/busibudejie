@@ -1,19 +1,19 @@
 //
-//  ScjAllTableViewController.m
+//  ScjTopicTableViewController.m
 //  BuDeJie-Scj
 //
 //  Created by 施仓健 on 2017/8/5.
-//  Copyright © 2017年 施仓健. All rights reserved.
+//  Copyright © 2017年 施仓健. Topic rights reserved.
 //
 
-#import "ScjAllTableViewController.h"
+#import "ScjTopicTableViewController.h"
 #import "ScjTopic.h"
 #import "ScjTopicCell.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
 
-@interface ScjAllTableViewController ()
+@interface ScjTopicTableViewController ()
 
 /** 当前最后一条帖子数据的描述信息，专门用来加载下一页数据 */
 @property (nonatomic, copy) NSString *maxtime;
@@ -36,11 +36,15 @@
 
 @property (nonatomic, weak) UILabel *footerL;
 
+// 有了方法声明，点语法才会有智能提示
+//- (ScjTopicType)type;
 @end
 
 static NSString * const ScjTopicCellID = @"ScjTopicCellID";
 
-@implementation ScjAllTableViewController
+@implementation ScjTopicTableViewController
+
+- (ScjTopicType)type{ return 0; };
 
 - (AFHTTPSessionManager *)manager{
     
@@ -65,8 +69,8 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     
     self.tableView.scrollsToTop = NO;
     
-//    self.tableView.rowHeight = 200;
-//    self.tableView.estimatedRowHeight = 200;
+    //    self.tableView.rowHeight = 200;
+    //    self.tableView.estimatedRowHeight = 200;
     
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([ScjTopicCell class]) bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:ScjTopicCellID];
@@ -137,7 +141,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     
     if (self.tableView.scrollsToTop == NO) return;
     
-//    ScjLog(@"%@ - 刷新数据", self.class)
+    //    ScjLog(@"%@ - 刷新数据", self.class)
     
     [self headerBeginRefreshing];
     
@@ -153,19 +157,19 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
 
 - (void)loadNewData{
     
-//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    //    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1"; // 这里发送@1也是可行的/** 帖子的类型 1为全部 10为图片 29为段子 31为音频 41为视频 */
+    parameters[@"type"] = @(self.type); // 这里发送@1或者字符串也是可行的/** 帖子的类型 1为全部 10为图片 29为段子 31为音频 41为视频 */
     
     [self.manager GET:ScjCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
-//        [responseObject writeToFile:@"/Users/shicangjian/Desktop/OC项目/topics1.plist" atomically:YES];
+        //        [responseObject writeToFile:@"/Users/shicangjian/Desktop/OC项目/topics1.plist" atomicTopicy:YES];
         self.topics = [ScjTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [self.tableView reloadData];
@@ -202,20 +206,20 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
 
 - (void)loadMoreData{
     
-//    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    //    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
+    parameters[@"type"] = @(self.type); // 这里发送@1也是可行的
     parameters[@"maxtime"] = self.maxtime;
     
     [self.manager GET:ScjCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
-        //        [responseObject writeToFile:@"/Users/shicangjian/Desktop/OC项目" atomically:YES];
+        //        [responseObject writeToFile:@"/Users/shicangjian/Desktop/OC项目" atomicTopicy:YES];
         NSArray *topicArr = [ScjTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         //把数组中的内容累加到已有数组后面
         [self.topics addObjectsFromArray:topicArr];
@@ -254,15 +258,15 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    static NSString *ID = @"cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-//        cell.backgroundColor = [UIColor clearColor];
-//    }
-//    ScjTopic *topic = self.topics[indexPath.row];
-//    cell.detailTextLabel.text = topic.text;
-//    cell.textLabel.text = topic.name;
+    //    static NSString *ID = @"cell";
+    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    //    if (cell == nil) {
+    //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    //        cell.backgroundColor = [UIColor clearColor];
+    //    }
+    //    ScjTopic *topic = self.topics[indexPath.row];
+    //    cell.detailTextLabel.text = topic.text;
+    //    cell.textLabel.text = topic.name;
     
     // control + command + 空格 -> 弹出emoji表情键盘
     //    cell.textLabel.text = @"⚠️哈哈";
@@ -329,7 +333,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     
     // 清除沙盒中所有使用SD缓存的图片
     //    [[SDImageCache sharedImageCache] clearDisk];
-
+    
 }
 
 - (void)dealHeader{
@@ -344,7 +348,7 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
         self.headerL.text = @"下拉可以刷新";
         self.headerL.backgroundColor = [UIColor redColor];
     }
-
+    
 }
 
 - (void)dealFooter{
@@ -371,9 +375,9 @@ static NSString * const ScjTopicCellID = @"ScjTopicCellID";
     
     [UIView animateWithDuration:0.25 animations:^{
         UIEdgeInsets inset = self.tableView.contentInset;
-
+        
         inset.top += self.header.scj_height;
-
+        
         self.tableView.contentInset = inset;
         
         //注意，改变conten位置，修改偏移量

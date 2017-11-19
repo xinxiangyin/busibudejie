@@ -11,11 +11,11 @@
 #import "UIView+ScjFrame.h"
 #import "ScjTitleBtn.h"
 #import "ScjConst.h"
-#import "ScjAllTableViewController.h"
-#import "ScjVideoTableViewController.h"
-#import "ScjVoiceTableViewController.h"
-#import "ScjPictureTableViewController.h"
-#import "ScjWordTableViewController.h"
+#import "ScjAllViewController.h"
+#import "ScjVideoViewController.h"
+#import "ScjVoiceViewController.h"
+#import "ScjPictureViewController.h"
+#import "ScjWordViewController.h"
 
 @interface ScjEssenceViewController () <UIScrollViewDelegate>
 
@@ -63,15 +63,15 @@
 }
 
 - (void)setupChildVC{
-    [self addChildViewController:[[ScjAllTableViewController alloc] init]];
+    [self addChildViewController:[[ScjAllViewController alloc] init]];
     
-    [self addChildViewController:[[ScjVideoTableViewController alloc] init]];
+    [self addChildViewController:[[ScjVideoViewController alloc] init]];
     
-    [self addChildViewController:[[ScjVoiceTableViewController alloc] init]];
+    [self addChildViewController:[[ScjVoiceViewController alloc] init]];
     
-    [self addChildViewController:[[ScjPictureTableViewController alloc] init]];
+    [self addChildViewController:[[ScjPictureViewController alloc] init]];
     
-    [self addChildViewController:[[ScjWordTableViewController alloc] init]];
+    [self addChildViewController:[[ScjWordViewController alloc] init]];
      
 }
 
